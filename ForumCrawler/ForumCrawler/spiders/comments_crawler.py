@@ -22,7 +22,8 @@ class CommentsSpider(scrapy.Spider):
             text = re.sub(cleaner, ' ', text)
             text = re.sub(cleanest, '', text)
             yield {
-                comment.css('div.username a::text').extract_first() : text
+                "user" : comment.css('div.username a::text').extract_first(),
+                "comment" : text
             }
 
         pager = response.css('div.pager')
