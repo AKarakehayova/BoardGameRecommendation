@@ -1,5 +1,6 @@
 const fs = require('fs')
 const spellcheck = require('./check')
+const comments = require('./getCommentsForGame')
 const file = require('./ForumCrawler/ForumCrawler/spiders/comments.json')
 let content = JSON.stringify(file)
 spellcheck.spellcheck().then((result) => {
@@ -9,6 +10,6 @@ spellcheck.spellcheck().then((result) => {
         content = content.replace(key, value)
     }
     fs.writeFileSync('./spellcheck.json', content)
-
 })
 
+comments.getComments("Blood Rage")
