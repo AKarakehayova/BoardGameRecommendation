@@ -2,7 +2,8 @@ from textblob import TextBlob
 import glob
 
 files = glob.glob('./SearchEngine/*.txt')
-print(files)
+# print(files)
+classification = open("classification.txt", "a")
 for file in files:
     with open(file) as f:
         lines = [line.rstrip('\n') for line in f]
@@ -14,10 +15,12 @@ for file in files:
             polarity = polarity + tb.sentiment.polarity
             subjectivity = subjectivity + tb.sentiment.subjectivity
             counter = counter + 1
-        print(file)
-        print(polarity/counter)
-        print(subjectivity/counter)
-        print('----------------')
+        gameName = file.replace("./SearchEngine/", "")
+        gameName = gameName.replace(".txt", "") #todo regex 
+        newLine = "" + gameName + "---" + str(polarity/counter) + "---" + str(subjectivity/counter) + "\n" 
+        classification.write(newLine)
+
+
 
 
 
