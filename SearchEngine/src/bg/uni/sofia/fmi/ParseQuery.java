@@ -43,12 +43,6 @@ public class ParseQuery {
 
 		Query query = parser.parse(line);
 		doParseFile(searcher, query, line);
-
-//		String[] comments = doParseArray(searcher, query, line);
-//		for (String comment : comments) {
-//			System.out.println(comment);
-//		}
-
 	}
 
 	public static void doParseFile(IndexSearcher searcher, Query query, String queryString) throws Exception {
@@ -61,21 +55,11 @@ public class ParseQuery {
 		int size = hits.length;
 		for (int i = 0; i < size; i++) {
 			String comment = searcher.doc(hits[i].doc).get("comment");
-			writer.println(comment.trim());
+                        String user = searcher.doc(hits[i].doc).get("user");
+                        String line = "{\"user\": \"" + user  + "\", \"comment\": \"" + comment.trim() + "\"}";
+			writer.println(line);
 		}
 		writer.flush();
 		writer.close();
-	}
-
-	public static String[] doParseArray(IndexSearcher searcher, Query query, String queryString) throws Exception {
-		TopDocs result = searcher.search(query, 200);
-		ScoreDoc[] hits = result.scoreDocs;
-		int size = hits.length;
-		String[] output = new String[size];
-		for (int i = 0; i < size; i++) {
-			String comment = searcher.doc(hits[i].doc).get("comment");
-			output[i] = comment.trim();
-		}
-		return output;
 	}
 }
