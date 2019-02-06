@@ -1,0 +1,26 @@
+[
+    {
+        "name": "dixit",
+        "count": 2,
+        "polarity": 0.34348958333333335,
+        "subjectivity": 0.48281250000000003
+    },
+    {
+        "name": "kemet",
+        "count": 27,
+        "polarity": 0.1400469531227995,
+        "subjectivity": 0.4491991885046515
+    },
+    {
+        "name": "7 Wonders",
+        "count": 18,
+        "polarity": 0.14269848936221582,
+        "subjectivity": 0.552103161517644
+    },
+    {
+        "name": "Blood Rage",
+        "count": 21,
+        "polarity": 0.054912932481926795,
+        "subjectivity": 0.3939610994077106
+    }
+]
