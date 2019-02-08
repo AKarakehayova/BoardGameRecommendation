@@ -1,8 +1,7 @@
 
 import React from 'react'
 import ReactTable from "react-table";
-import "react-table/react-table.css";
-
+import data from '../classification.json'
 export class App extends React.Component {
   constructor (props) {
     super(props)
@@ -10,9 +9,7 @@ export class App extends React.Component {
     }
   }
 
-  componentDidMount(){
-   
-  }
+  
 
   render () {
     
@@ -21,38 +18,34 @@ export class App extends React.Component {
           data={data}
           columns={[
             {
-              Header: "Name",
               columns: [
                 {
-                  Header: "First Name",
-                  accessor: "firstName"
-                },
-                {
-                  Header: "Last Name",
-                  id: "lastName",
-                  accessor: d => d.lastName
+                  Header: "Name",
+                  accessor: "name"
                 }
               ]
             },
             {
-              Header: "Info",
               columns: [
                 {
-                  Header: "Age",
-                  accessor: "age"
-                },
-                {
-                  Header: "Status",
-                  accessor: "status"
+                  Header: "Count",
+                  accessor: "count"
                 }
               ]
             },
             {
-              Header: 'Stats',
               columns: [
                 {
-                  Header: "Visits",
-                  accessor: "visits"
+                  Header: "Polarity",
+                  accessor: "polarity"
+                }
+              ]
+						},
+						{
+              columns: [
+                {
+                  Header: "Subjectivity",
+                  accessor: "subjectivity"
                 }
               ]
             }
