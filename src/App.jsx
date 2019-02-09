@@ -40,17 +40,26 @@ export class App extends React.Component {
                   accessor: "polarity"
                 }
               ]
-						},
-						{
+            },
+            {
               columns: [
                 {
                   Header: "Subjectivity",
                   accessor: "subjectivity"
                 }
               ]
+            },
+            {
+              columns: [
+                {
+                  Header: "Keywords",
+                  id: "keywords",
+                  accessor: data => data.keywords.join(", ")
+                }
+              ]
             }
           ]}
-          defaultPageSize={10}
+          showPagination ={false} 
           className="-striped -highlight"
         />
     </div >)
