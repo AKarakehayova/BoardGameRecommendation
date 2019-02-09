@@ -19,10 +19,10 @@ import org.apache.lucene.store.FSDirectory;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class CreateIndix {
+public class CreateIndex {
 	public static void main(String[] args) throws IOException {
 		StandardAnalyzer standardAnalyzer = new StandardAnalyzer();
-		String inputFilePath = "../ForumCrawler/ForumCrawler/comments.json";
+		String inputFilePath = "../ForumCrawler/comments.json";
 		String outputDir = "./output";
 
 		Directory directory = FSDirectory.open(Paths.get(outputDir));
