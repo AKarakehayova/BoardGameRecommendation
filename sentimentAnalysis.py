@@ -18,7 +18,7 @@ for file in files:
             subjectivity = subjectivity + tb.sentiment.subjectivity
             counter = counter + 1
         gameName = file.replace("./SearchEngine/", "")
-        gameName = gameName.replace(".txt", "") #todo regex 
+        gameName = gameName.replace(".txt", "")
         newLine = {
             'name': gameName,
             'count': counter,

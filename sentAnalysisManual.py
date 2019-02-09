@@ -4,7 +4,7 @@ import glob
 import json
 
 files = glob.glob('./SearchEngine/*.txt')
-classification = open("classification2.json", "w")
+classification = open("classificationManual.json", "w")
 games = []
 
 
@@ -27,7 +27,7 @@ for file in files:
             counter = counter + 1 
 
         gameName = file.replace("./SearchEngine/", "")
-        gameName = gameName.replace(".txt", "") #todo regex 
+        gameName = gameName.replace(".txt", "")
         newLine = {
             'name': gameName,
             'count': counter,

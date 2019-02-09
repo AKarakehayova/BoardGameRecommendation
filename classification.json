@@ -3,24 +3,36 @@
         "name": "dixit",
         "count": 2,
         "polarity": 0.34348958333333335,
-        "subjectivity": 0.48281250000000003
+        "subjectivity": 0.48281250000000003,
+        "keywords": ["mysterium", "sushi", "push", "moves", "steer", "players", "short", "successful", "friends"]
     },
     {
         "name": "kemet",
         "count": 27,
         "polarity": 0.1400469531227995,
-        "subjectivity": 0.4491991885046515
+        "subjectivity": 0.4491991885046515,
+        "keywords": [
+            "games", "good", "cyclades", "combat", "nexus", "dice", "enjoy", "root", "time", "havoc", "great", "balance"]
+    },
+    {
+        "name": "Scythe",
+        "count": 6,
+        "polarity": 0.11743121693121693,
+        "subjectivity": 0.6727461519961521,
+        "keywords": ["great", "root", "player", "good", "favorite", "agency", "lords", "things", "fight", "encouraged",  "long", "hilarity" ]
     },
     {
         "name": "7 Wonders",
         "count": 18,
         "polarity": 0.14269848936221582,
-        "subjectivity": 0.552103161517644
+        "subjectivity": 0.552103161517644,
+        "keywords": ["player", "duel",  "play", "cities", "mombasa", "battle", "lost", "wonders", "ancients" ,"shadows", "imperial", "dark", "quick" ]
     },
     {
         "name": "Blood Rage",
         "count": 21,
-        "polarity": 0.054912932481926795,
-        "subjectivity": 0.3939610994077106
+        "polarity": 0.06389773075243935,
+        "subjectivity": 0.3761819492306013,
+        "keywords": ["good", "kemet", "dice", "play", "combat", "cyclades", "havoc", "map", "great", "wars", "lot", "turn", "favorite" ]
     }
 ]
